@@ -6,7 +6,7 @@ let app = angular.module("MyApp", []);
 app.controller("MyController", ($scope, $http) => {
   //this is controller
 
-  $scope.title = "stay home stay safe";
+  $scope.title = "COVID TRACKER APP  -stay home stay safe";
 
   console.log("App Loaded");
 
