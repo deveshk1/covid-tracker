@@ -37,8 +37,7 @@ app.controller("MyController", ($scope, $http) => {
     $http.get(`${URL}/countries/${country}`).then(
       (response) => {
         //success
-        console.log("############");
-        console.log(response.data);
+   
         $scope.getFlag();
         $scope.country_data = response.data;
       },
@@ -50,13 +49,15 @@ app.controller("MyController", ($scope, $http) => {
   };
 
   $scope.getFlag =()=>{
-      console.log("here");
+
        $http.get(`https://restcountries.eu/rest/v2/name/${$scope.country}`)
       .then((response)=>{
      
           $scope.code = response.data[0];
           console.log($scope.code );
       },(error)=>{})
+
+      
     
       
   };
